@@ -1,14 +1,17 @@
 html {
   height: 100%;
-  font-family: Tahoma, Helvetica, sans-serif;
-  font-size: 90%;
-  line-height: 130%;
+  font-family: "Roboto", sans-serif;
+  font-size: 95%;
+  line-height: 135%;
 }
 
 
 body {
   direction: ltr;
   height: 100vh; /*need to check this */
+  background-color: #efefef;
+  margin: 0;
+  padding: 0;
 }
 body, header, footer {
   width: 100%;
@@ -19,12 +22,12 @@ body, header, footer {
   display: flex;
   -webkit-flex-direction: row;
    flex-direction: row;
-   background-color: white;
+   background-color: inherit;
    -webkit-align-items: stretch;
   align-items: stretch;
   -webkit-justify-content: space-around;
     justify-content: space-around;
-    width: 98%;
+    width: 100%;
 }
 
 
@@ -42,7 +45,7 @@ body, header, footer {
    -webkit-justify-content: center;
      justify-content: center;
    width: 42%;
-   background-color: white;
+   background-color: inherit;
    margin-left: .5%;
    margin-right: 1%;
 
@@ -52,40 +55,76 @@ body, header, footer {
    -webkit-align-content: flex-start;
    align-content:flex-start;
    width: 55%;
-   background-color: white;
+   background-color: inherit;
    margin-left: 1%;
    margin-right: .5%;
 }
 
-.mini-right{
-  width: 30%;
+.mini-right, .mini-right2{
   margin-left: .5%;
   margin-right: 1%;
   align-items: center;
 }
 
-.mini-left{
-  width: 65%;
+.mini-left, .mini-left2{
   margin-left: 1%;
   margin-right: .5%;
 }
 
+.mini-right{
+  width: 35%;
+}
+
+.mini-left{
+  width: 60%;
+}
+
+.mini-right2{
+  width: 45%;
+}
+
+.mini-left2{
+  width: 50%
+}
+
+/*box shaddow support from MDN and CSS tricks*/
 .info {
-    background-color: cornflowerblue;
-    border: 3px solid #33BC87;
+    /*border: 3px solid #33BC87;*/
     height: auto;
     overflow: auto;
     margin: 1%;
     padding: 1%;
+    webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+   transition: all .2s ease-in-out;
 }
+
+.info:hover {
+  transform: scale(1.1);
+  webkit-box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
+     -moz-box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
+          box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
+}
+
 
 .personal, .banking, .coding {
   background-color: white;
 }
 
 h3 ~ p {
-    padding: 1%;
+    padding: .5%;
 }
+
+h3 ~ p, ul li{
+ color: #4f4f4f;
+ font-size: 92%;
+}
+
+li {
+  margin: 0 0 1px 0;
+}
+
 .right-side, #right-one, #right-two, #right-five{
   margin: 1%;
   width: 97%;
@@ -111,33 +150,45 @@ h3 ~ p {
      padding: 0;
 }
 
-h1, h1 + p, footer p, h3, #personal /*div > h3, div ~ h3,*/  {
+h3, #personal {
   text-align: center;
-
+  color: #696969; /*dark grey*/
 }
+
 p#intro {
-margin-top: -10px;
+margin-top: -15px;
 }
 
 header {
-  color: black;
-  background: #fff;
-  border-bottom: 5px solid #33BC87;
-  margin-bottom: 1%; /*#4CB28B last green #3FBF7F green #4C4CB2 purple blue#4C92B2 */
-  /*z-index: 9999;
-  top: 0;
-  position: fixed;*/
-  padding: 0px 0px 10px;
+  color: white;
+  background: #696969;
+  background: -webkit-linear-gradient(left, #696969, #696969, #696969, #efefef);
+  background: -o-linear-gradient(right, #696969, #696969, #696969, #efefef);
+  background: -moz-linear-gradient(right, #696969, #696969, #696969, #efefef);
+  background: linear-gradient(to right, #696969, #696969, #696969, #efefef);
+  border-bottom: 2px solid #33BC87;
+  margin: 0, 0, 1%, 0;
+  padding: 2px 0px 5px;
+  text-align: center
 }
 
 footer {
-   background: #fff;
-   color: black;
-   border-top: 5px solid #33BC87;
-   margin-top: 5px;
-   bottom: 0px; /*see if need this */
+   background: #696969;
+   color: white;
+   border-top: 2px solid #33BC87;
+   margin: 1%, 0, 0, 0;
+   padding: 3px 0px 1px;
+   text-align: center
 }
 
 footer p:last-child {
-  margin-top: -10px
+  margin-top: -15px
+}
+
+.banking span, .coding span {
+  text-decoration: underline;
+}
+
+.personal span {
+  font-weight: bold;
 }
