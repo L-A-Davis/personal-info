@@ -1,14 +1,14 @@
 html {
   height: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 95%;
-  line-height: 135%;
+  font-size: 90%;
+  line-height: 145%;
 }
 
 
 body {
   direction: ltr;
-  height: 100vh; /*need to check this */
+  height: 100vh;
   background-color: #efefef;
   margin: 0;
   padding: 0;
@@ -54,6 +54,8 @@ body, header, footer {
 .left-side-container {
    -webkit-align-content: flex-start;
    align-content:flex-start;
+   -webkit-justify-content: space-between;
+     justify-content: space-between;
    width: 55%;
    background-color: inherit;
    margin-left: 1%;
@@ -94,10 +96,10 @@ body, header, footer {
     overflow: auto;
     margin: 1%;
     padding: 1%;
-    webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
-   transition: all .2s ease-in-out;
+  background-color: white;
 }
 
 .info:hover {
@@ -105,11 +107,6 @@ body, header, footer {
   webkit-box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
      -moz-box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
           box-shadow:0 1px 12px rgba(51, 186, 134, 0.4), 0 0 60px rgba(51, 186, 134, 0.2);
-}
-
-
-.personal, .banking, .coding {
-  background-color: white;
 }
 
 h3 ~ p {
@@ -125,7 +122,7 @@ li {
   margin: 0 0 1px 0;
 }
 
-.right-side, #right-one, #right-two, #right-five{
+.right-side, #right-one, #right-two, #right-three{
   margin: 1%;
   width: 97%;
 }
@@ -134,12 +131,16 @@ li {
   width: 100%;
 }
 
-#left-two, #left-three, #left-four {
-  width: 28%;
+#left-two, #left-three {
+  width: 46%;
 }
 
-#left-six, #left-five, #right-three, #right-four{
-  width: 45%
+#left-four {
+  width: 30%;
+}
+
+#left-five{
+  width: 62%;
 }
 
 .picture {
@@ -166,29 +167,21 @@ header {
   background: -o-linear-gradient(right, #696969, #696969, #696969, #efefef);
   background: -moz-linear-gradient(right, #696969, #696969, #696969, #efefef);
   background: linear-gradient(to right, #696969, #696969, #696969, #efefef);
-  border-bottom: 2px solid #33BC87;
+  border-bottom: 5px solid #33BC87;
   margin: 0, 0, 1%, 0;
   padding: 2px 0px 5px;
-  text-align: center
+  text-align: center;
 }
 
 footer {
    background: #696969;
    color: white;
-   border-top: 2px solid #33BC87;
+   border-top: 5px solid #33BC87;
    margin: 1%, 0, 0, 0;
    padding: 3px 0px 1px;
-   text-align: center
+   text-align: center;
 }
 
 footer p:last-child {
   margin-top: -15px
-}
-
-.banking span, .coding span {
-  text-decoration: underline;
-}
-
-.personal span {
-  font-weight: bold;
 }
